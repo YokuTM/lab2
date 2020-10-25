@@ -6,6 +6,7 @@
     $d=date("d.m.Y H:i");
     echo($d);
 ?>
+ЛР № 1 </br>
 <ul id="nav">
     <li><a href="2.4.php">Задание 2.4 В-1</a>
     <li><a href="2.4.2.php">Задание 2.4 В-5</a>   
