@@ -4,7 +4,7 @@
 </body>
 <?php
     $d=date("d.m.Y H:i");
-    echo($d);
+    echo($d)."</br>";
 ?>
 ЛР № 1 </br>
 <ul id="nav">
