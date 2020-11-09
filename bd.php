@@ -14,3 +14,6 @@ if (!$link) {
 echo "Соединение с MySQL установлено!" . PHP_EOL;
 ?>
 </body> </html>
+<ul id="nav">
+    <li><a href="delete.php">Удаление </a>  
+</ul>
