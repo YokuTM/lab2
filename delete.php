@@ -1,9 +1,10 @@
 <?php
- mysqli_connect("localhost","root","") or die ("Невозможно
-подключиться к серверу");
- mysqli_select_db("users") or die("Нет такой таблицы!");
- $zapros="DELETE FROM user WHERE id_user=" . $_GET['id_user'];
- mysqli_query($zapros);
- header("Location: index.php");
- exit;
+ define('DB_HOST','localhost');
+define('DB_USER','root');
+define('DB_PASSWORD','');
+define('DB_NAME','users');
+	$mysql = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+if ($mysql->connect_errno) exit('Ощибка');
+	$mysql->set_charset('utf8');
+	$mysql->close();
 ?>
