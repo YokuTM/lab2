@@ -2,6 +2,7 @@
 <head> <title> Сведения о прользователях сайта </title> </head>
 <body>
 <?php
+ echo "АУФ";
  mysql_connect("localhost", "root") or die ("Невозможно
 подключиться к серверу"); // установление соединения с сервером
  mysql_query('SET NAMES cp1251'); // тип кодировки
