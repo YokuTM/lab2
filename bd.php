@@ -2,7 +2,7 @@
 <head> <title> Сведения о прользователях сайта </title> </head>
 <body>
 <?php
-$link = mysqli_connect("localhost", "root", "1234567", "users");
+$link = mysqli_connect("localhost", "root", " ", "users");
 
 if (!$link) {
     echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
