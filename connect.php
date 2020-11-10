@@ -11,5 +11,5 @@ if ($mysql->connect_errno) {
 if (!$mysql->set_charset("utf8")) {
     printf("Ошибка при загрузке набора символов utf8: %s\n", $mysql->error);
 }
-mysql_query('SET NAMES cp1251');
+
 ?>
