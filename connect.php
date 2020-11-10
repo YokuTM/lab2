@@ -6,9 +6,9 @@ $db_name = 'users';
  
 $mysql = new mysqli($server, $db_user, $db_pass, $db_name);
 if ($mysql->connect_errno) {
-    echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+    echo "Не удалось подключиться к MySQL: (" . $mysql->connect_errno . ") " . $mysql->connect_error;
 }
 if (!$mysql->set_charset("utf8")) {
-    printf("Ошибка при загрузке набора символов utf8: %s\n", $mysqli->error);
+    printf("Ошибка при загрузке набора символов utf8: %s\n", $mysql->error);
 }
 ?>
