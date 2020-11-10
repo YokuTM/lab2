@@ -1,10 +1,14 @@
 <?php
-$mysql = mysqli_connect('localhost','root', '', 'users');
-	
-if (!$mysql){ 
-    echo "Ошибка: Невозможно установить соединение с MySQL." . PHP_EOL;
-    echo "Код ошибки errno: " . mysqli_connect_errno() . PHP_EOL;
-    echo "Текст ошибки error: " . mysqli_connect_error() . PHP_EOL;
-    exit;
+$server = 'localhost';
+$db_user = 'root';
+$db_pass = '';
+$db_name = 'users';
+ 
+$mysql = new mysqli($server, $db_user, $db_pass, $db_name);
+if ($mysql->connect_errno) {
+    echo "Не удалось подключиться к MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+}
+if (!$mysql->set_charset("utf8")) {
+    printf("Ошибка при загрузке набора символов utf8: %s\n", $mysqli->error);
 }
 ?>
