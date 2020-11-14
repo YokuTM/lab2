@@ -43,7 +43,7 @@
 					<td><?= $stu[4]?></td>
 					<td><?= $stu[5]?></td>
 					<td><a href="up.php?full_name=<?= $stu[1]?>">ОБНОВИТЬ</a></td>
-					<td><a style="color: red" href="del.php?full_name=<?= $stu[1]?>">УДАЛИТЬ</a></td>
+					<td><a style="color: red" href="del.php?num_report_card=<?= $stu[4]?>">УДАЛИТЬ</a></td>
 		</tr>
 		<?php
 			}
