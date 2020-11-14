@@ -1,7 +1,5 @@
 <?php
 	require_once'connect.php';
-	
-
 
 ?>
 <!doctype html>
@@ -55,8 +53,6 @@
 		</table>
 		<h3>ДОБАВЛЕНИЕ НОВОГО СТУДЕНТА</h3>
 		<form action="ven.php" method="post">
-		<p>ID</p>
-		<input type="number" name="id_user">
 		<p>ФИО</p>
 		<input type="text" name="full_name">
 		<p>ФАКУЛЬТЕТ</p>
