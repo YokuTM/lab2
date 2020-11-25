@@ -25,5 +25,5 @@
 </ul>
 ЛР № 4 </br>
 <ul id="nav">
-    <li><a href="index1.php">bd_user </a>  
+    <li><a href="index2.php">bd_user </a>  
 </ul>
