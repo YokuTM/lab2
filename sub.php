@@ -26,6 +26,7 @@
 			<th>ID</th>
 			<th>НАЗВАНИЕ</th>
 			<th>ФИО ПРЕПОДАВАТЕЛЯ</th>
+			<th><a href=" index2.php">Вернуться в меню</a></th>
 		</tr>
 		<?php
 			$stud=mysqli_query($mysql, "SELECT * FROM `sub`");
