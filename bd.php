@@ -29,6 +29,7 @@
 			<th>ГРУППА</th>
 			<th>НОМЕР ЗАЧЕТКИ</th>
 			<th>НОМЕР ТЕЛЕФОНА</th>
+			<th><a href=" index2.php">Вернуться в меню</a></th>
 		</tr>
 		<?php
 			$stud=mysqli_query($mysql, "SELECT * FROM `student`");
