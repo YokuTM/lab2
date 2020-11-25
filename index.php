@@ -23,7 +23,7 @@
     <li><a href="3.6.3.php">Задание 3.6 В-3</a> 
     <li><a href="3.6.2.php">Задание 3.6 В-5</a> 
 </ul>
-ЛР № 4 </br>
+ЛР № 4 и № 5</br>
 <ul id="nav">
     <li><a href="index2.php">bd_user </a>  
 </ul>
