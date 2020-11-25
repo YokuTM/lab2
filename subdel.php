@@ -1,5 +1,6 @@
 <?php
 require_once'connect.php';
+$id_sub=$_GET['id_sub'];
 $name=$_GET['name'];
 $fio=$_GET['fio'];
 mysqli_query($mysql, "DELETE FROM `sub` WHERE `sub`.`id_sub`='$id_sub'");
