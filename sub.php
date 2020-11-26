@@ -54,7 +54,5 @@
 		<input type="text" name="fio"><br><br>
 		<button type="sumbit">ДОБАВЛЕНИЕ НОВОГО ПРЕДМЕТА</button>
 		</form>
-		<br><br><button style="color: red" onclick="window.location.href ='gen_pdf.php';">PDF</button>
-		<button style="color: green" onclick="window.location.href ='gen_xls.php';">Excel</button>
 </body>
 </html>

@@ -66,7 +66,5 @@
 		<input type="number" name="number"><br><br>
 		<button type="sumbit">ДОБАВЛЕНИЕ НОВОГО СТУДЕНТА</button>
 		</form>
-		<br><br><button style="color: red" onclick="window.location.href ='gen_pdf.php';">PDF</button>
-		<button style="color: green" onclick="window.location.href ='gen_xls.php';">Excel</button>
 </body>
 </html>
