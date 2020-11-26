@@ -6,7 +6,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTD-8">
-	<title>Предметы</title>
+	<title>Зачетная ведомость</title>
 </head>
 <style>
 		th,td {
@@ -24,12 +24,14 @@
 	<table>
 		<tr>
 			<th>ID</th>
-			<th>НАЗВАНИЕ</th>
-			<th>ФИО ПРЕПОДАВАТЕЛЯ</th>
+			<th>ДАТА СДАЧИ</th>
+			<th>ID СТУДЕНТА</th>
+			<th>ID ПРЕДМЕТА</th>
+			<th>ОЦЕНКА</th>
 			<th><a href=" index2.php">Вернуться в меню</a></th>
 		</tr>
 		<?php
-			$stud=mysqli_query($mysql, "SELECT * FROM `sub`");
+			$stud=mysqli_query($mysql, "SELECT * FROM `zach`");
 			$stud = mysqli_fetch_all($stud);
 			foreach ($stud as $stu){
 				?>
@@ -37,8 +39,10 @@
 					<td><?= $stu[0]?></td>
 					<td><?= $stu[1]?></td>
 					<td><?= $stu[2]?></td>
-					<td><a href=" subup.php?id_sub=<?= $stu[0]?>">ОБНОВИТЬ</a></td>
-					<td><a style="color: red" href=" subdel.php?id_sub=<?= $stu[0]?>">УДАЛИТЬ</a></td>
+					<td><?= $stu[3]?></td>
+					<td><?= $stu[4]?></td>
+					<td><a href=" zup.php?id=<?= $stu[0]?>">ОБНОВИТЬ</a></td>
+					<td><a style="color: red" href=" zdel.php?id=<?= $stu[0]?>">УДАЛИТЬ</a></td>
 		</tr>
 		<?php
 			}
@@ -46,12 +50,16 @@
 		?>
 		
 		</table>
-		<h3>ДОБАВЛЕНИЕ НОВОГО СТУДЕНТА</h3>
-		<form action="subven.php" method="post">
-		<p>Название</p>
-		<input type="text" name="name">
-		<p>ФИО ПРЕПОДАВАТЕЛЯ</p>
-		<input type="text" name="fio"><br><br>
+		<h3>ДОБАВЛЕНИЕ НОВОГО ПУНКТА</h3>
+		<form action="zven.php" method="post">
+		<p>ДАТА СДАЧИ</p>
+		<input type="text" name="date">
+		<p>ID СТУДЕНТА</p>
+		<input type="text" name="id_user">
+		<p>ID ПРЕДМЕТА</p>
+		<input type="text" name="id_sub">
+		<p>ОЦЕНКА</p>
+		<input type="text" name="score"><br><br>
 		<button type="sumbit">ДОБАВЛЕНИЕ НОВОГО ПРЕДМЕТА</button>
 		</form>
 		<br><br><button style="color: red" onclick="window.location.href ='gen_pdf.php';">PDF</button>

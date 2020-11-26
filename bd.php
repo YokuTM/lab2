@@ -43,8 +43,8 @@
 					<td><?= $stu[3]?></td> 
 					<td><?= $stu[4]?></td>
 					<td><?= $stu[5]?></td>
-					<td><a href="up.php?full_name=<?= $stu[1]?>">ОБНОВИТЬ</a></td>
-					<td><a style="color: red" href="del.php?num_report_card=<?= $stu[4]?>">УДАЛИТЬ</a></td>
+					<td><a href="up.php?id_user=<?= $stu[0]?>">ОБНОВИТЬ</a></td>
+					<td><a style="color: red" href="del.php?id_user=<?= $stu[0]?>">УДАЛИТЬ</a></td>
 		</tr>
 		<?php
 			}
@@ -66,5 +66,7 @@
 		<input type="number" name="number"><br><br>
 		<button type="sumbit">ДОБАВЛЕНИЕ НОВОГО СТУДЕНТА</button>
 		</form>
+		<br><br><button style="color: red" onclick="window.location.href ='gen_pdf.php';">PDF</button>
+		<button style="color: green" onclick="window.location.href ='gen_xls.php';">Excel</button>
 </body>
 </html>

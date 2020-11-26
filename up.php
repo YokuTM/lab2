@@ -1,7 +1,7 @@
 <?php
 	require_once'connect.php';
-	$prod_id=$_GET['full_name'];
-	$prod = mysqli_query($mysql, "SELECT * FROM `student` WHERE `full_name`='$prod_id'");
+	$prod_id=$_GET['id_user'];
+	$prod = mysqli_query($mysql, "SELECT * FROM `student` WHERE `id_user`='$prod_id'");
 	$prod = mysqli_fetch_assoc($prod);
 
 ?>

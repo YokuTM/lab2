@@ -1,6 +1,5 @@
 <?php
 	require_once 'connect.php';
-		//$id=$_POST['id_user'];
 		$fio=$_POST['full_name'];
 		$faq=$_POST['faculty'];
 		$group=$_POST['groupa'];
