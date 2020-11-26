@@ -76,8 +76,8 @@ $pdf->Ln();
 $counter++;
 }
 }
-$file_date = $pdf->Output("S");
+$file_data = $pdf->Output("S");
 fopen("Vedom.pdf","w+");
-file_put_contents("Vedom.pdf",$file_date);
+file_put_contents("Vedom.pda",$file_date);
 header("Location:Vedom.pdf")
 ?>
