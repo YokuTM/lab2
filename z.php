@@ -28,7 +28,7 @@
 			<th>ID СТУДЕНТА</th>
 			<th>ID ПРЕДМЕТА</th>
 			<th>ОЦЕНКА</th>
-			<th><a href=" index2.php">Вернуться в меню</a></th>
+			<th><a style="color: yellow" href=" index2.php">ВЕРНУТЬСЯ В МЕНЮ</a></th>
 		</tr>
 		<?php
 			$stud=mysqli_query($mysql, "SELECT * FROM `zach`");
