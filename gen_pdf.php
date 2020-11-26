@@ -77,5 +77,5 @@ $counter++;
 }
 }
 
-$pdf->Output();
+$pdf->Output("Vedom.pdf","I");
 ?>
