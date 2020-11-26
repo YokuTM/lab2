@@ -79,5 +79,5 @@ $counter++;
 $file_data = $pdf->Output("S");
 fopen("Vedom.pdf","w+");
 file_put_contents("Vedom.pda",$file_date);
-header(":Vedom.pdf")
+header("Location:Vedom.pdf")
 ?>
