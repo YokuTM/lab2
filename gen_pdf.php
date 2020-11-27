@@ -76,6 +76,7 @@ $pdf->Ln();
 $counter++;
 }
 }
+header('Content-Type: text/html; charset=utf-8');
 function fileRandLine($file)
 {
     $f = fopen($file, "r");
