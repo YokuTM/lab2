@@ -76,8 +76,18 @@ $pdf->Ln();
 $counter++;
 }
 }
-$file_data = $pdf->Output("S");
-fopen("Vedom.pdf","w+");
-file_put_contents("Vedom.pdf",$file_date);
-header("Location:Vedom.pdf")
+function fileRandLine($file)
+{
+    $f = fopen($file, "r");
+    while (!feof($f)) {
+    $line = fgets($f);
+        echo $line;
+    }
+    fclose($f);
+}
+echo fileRandLine($pdf);
+//$file_data = $pdf->Output("S");
+//fopen("Vedom.pdf","w+");
+//file_put_contents("Vedom.pdf",$file_date);
+//header("Location:Vedom.pdf")
 ?>
