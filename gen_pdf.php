@@ -76,10 +76,7 @@ $pdf->Ln();
 $counter++;
 }
 }
-header('Content-Type: application/pdf');
-$file_data = $pdf->Output("S");
-readfile($file_data);
-//fopen("Vedom.pdf","w+");
-//file_put_contents("Vedom.pdf",$file_date);
-//header("Location:Vedom.pdf")
+fopen("Vedom.pdf","w+");
+file_put_contents("Vedom.pdf",$file_date);
+header("Location:Vedom.pdf")
 ?>
