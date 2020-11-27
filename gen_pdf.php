@@ -76,17 +76,8 @@ $pdf->Ln();
 $counter++;
 }
 }
-header('Content-Type: text/html; charset=utf-8');
-function fileRandLine($file)
-{
-    $f = fopen($file, "r");
-    while (!feof($f)) {
-    $line = fgets($f);
-        echo $line;
-    }
-    fclose($f);
-}
-echo fileRandLine($pdf);
+header('Content-Type: application/pdf');
+readfile($pdf);
 //$file_data = $pdf->Output("S");
 //fopen("Vedom.pdf","w+");
 //file_put_contents("Vedom.pdf",$file_date);
