@@ -1,6 +1,5 @@
 <?php
 	require_once'connect.php';
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -44,13 +43,11 @@
 					<td><?= $stu[4]?></td>
 					<td><?= $stu[5]?></td>
 					<td><a href="up.php?id_user=<?= $stu[0]?>">ОБНОВИТЬ</a></td>
-					<td><a style="color: red" href="del.php?id_user=<?= $stu[0]?>">УДАЛИТЬ</a></td>
+					<td><a style="color: red" href="del.php?full_name=<?= $stu[1]?>">УДАЛИТЬ</a></td>
 		</tr>
 		<?php
 			}
-	
 		?>
-		
 		</table>
 		<h3>ДОБАВЛЕНИЕ НОВОГО СТУДЕНТА</h3>
 		<form action="ven.php" method="post">

@@ -87,7 +87,6 @@ require_once'connect.php';
             $r++;
         }
     }
-
     header ( "Content-type: application/vnd.ms-excel" );
     header("Content-Disposition: attachment;filename=Vedom.xls");
     header("Content-Transfer-Encoding: binary ");

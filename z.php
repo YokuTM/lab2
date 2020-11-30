@@ -32,8 +32,11 @@
 		</tr>
 		<?php
 			$stud=mysqli_query($mysql, "SELECT * FROM `zach`");
+			$stuс=mysqli_query($mysql, "SELECT * FROM `student`");
+			$stub=mysqli_query($mysql, "SELECT * FROM `student`");
 			$stud = mysqli_fetch_all($stud);
 			foreach ($stud as $stu){
+			
 				?>
 				<tr>
 					<td><?= $stu[0]?></td>
@@ -45,47 +48,39 @@
 					<td><a style="color: red" href=" zdel.php?id=<?= $stu[0]?>">УДАЛИТЬ</a></td>
 		</tr>
 		<?php
-			}
 			
+			}
 		?>
-		
 		</table>
 		<br><br><button style="color: red; height:40px;width:90px" onclick="window.location.href ='gen_pdf.php';">PDF</button><br><br>
 			<button style="color: green; height:40px;width:90px" onclick="window.location.href ='gen_xls.php';">Excel</button><br><br>
 		<h3>ДОБАВЛЕНИЕ НОВОГО ПУНКТА</h3>
 			<form action="zven.php" method="post">
 			<p>ДАТА СДАЧИ</p>
-			<input type="text" name="date">
+			<input type="date" name="date">
 			<?php
 			$result = mysqli_query($mysql, "SELECT id_user, full_name FROM student");
 			echo "<br><br>ФИО СТУДЕНТА:<br><br><select name='id_user'>";
 			if ($result){
-				// Для каждой строки из запроса
 				while ($row = $result->fetch_array()){
-				$id_user = $row['id_user'];
+				$id_user = $row['full_name'];
 				$full_name = $row['full_name'];
 
 				echo "<option value='$id_user'>$full_name</option>";
 				}
 				}
 				echo "</select>";
-			
-			//<input type="text" name="id_user">
 			$result = mysqli_query($mysql, "SELECT id_sub, name FROM sub");
 			echo "<br><br>НАЗВАНИЕ ПРЕДМЕТА:<br><br> <select name='id_sub'>";
 			if ($result){
-				// Для каждой строки из запроса
 				while ($row = $result->fetch_array()){
-				$id_sub = $row['id_sub'];
+				$id_sub = $row['name'];
 				$name = $row['name'];
 
 				echo "<option value='$id_sub'>$name</option>";
 				}
 				}
 				echo "</select>";
-			
-			
-			//<input type="text" name="id_sub">
 			?>
 			<p>ОЦЕНКА</p>
 			<input type="text" name="score"><br><br>

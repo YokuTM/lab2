@@ -38,7 +38,7 @@
 					<td><?= $stu[1]?></td>
 					<td><?= $stu[2]?></td>
 					<td><a href=" subup.php?id_sub=<?= $stu[0]?>">ОБНОВИТЬ</a></td>
-					<td><a style="color: red" href=" subdel.php?id_sub=<?= $stu[0]?>">УДАЛИТЬ</a></td>
+					<td><a style="color: red" href=" subdel.php?name=<?= $stu[1]?>">УДАЛИТЬ</a></td>
 		</tr>
 		<?php
 			}
