@@ -14,8 +14,8 @@ require_once'connect.php';
         sub.name as sub_name,
 		sub.fio as sub_fio
 		FROM zach
-        LEFT JOIN student ON zach.id_user=student.id_user
-		LEFT JOIN sub ON zach.id_sub=sub.id_sub"
+        LEFT JOIN student ON zach.id_user=student.full_name
+		LEFT JOIN sub ON zach.id_sub=sub.name"
     );
 
     $xls = new PHPExcel();
