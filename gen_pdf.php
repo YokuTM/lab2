@@ -53,7 +53,7 @@ $groupa = $row['groupa'];
 
 $num_report_card = $row['num_report_card'];
 $date = $row['date'];
-
+$date = date('d.m.Y', strtotime($date));
 $sub_name = $row['sub_name'];
 $score = $row['score'];
 $sub_fio = $row['sub_fio'];
