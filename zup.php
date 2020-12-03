@@ -16,7 +16,7 @@
 	<form action="zupdate.php" method="post">
 		<input type="hidden" name="id" value="<?=$prod['id']?>">
 		<p>ДАТА СДАЧИ</p>
-		<input type="text" name="date" value="<?=$prod['date']?>">
+		<input type="date" name="date" value="<?=$prod['date']?>">
 		<p>ID СТУДЕНТА</p>
 		<input type="text" name="id_user" value="<?=$prod['id_user']?>">
 		<p>ID ПРЕДМЕТА</p>
