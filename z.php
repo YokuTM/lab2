@@ -36,11 +36,11 @@
 			$stub=mysqli_query($mysql, "SELECT * FROM `student`");
 			$stud = mysqli_fetch_all($stud);
 			foreach ($stud as $stu){
-			
+			$date = date('d.m.Y', strtotime($stu[1]));
 				?>
 				<tr>
 					<td><?= $stu[0]?></td>
-					<td><?= $stu[1]?></td>
+					<td><?= $date?></td>
 					<td><?= $stu[2]?></td>
 					<td><?= $stu[3]?></td>
 					<td><?= $stu[4]?></td>
