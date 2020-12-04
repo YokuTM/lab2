@@ -74,7 +74,7 @@ require_once'connect.php';
             $a++;
 
             foreach ($row as $cell){
-		if ($a==1){
+		if ($a==5){
                     $cell = date('d.m.Y', strtotime($cell));
                 }
                 $sheet->setCellValueByColumnAndRow(
